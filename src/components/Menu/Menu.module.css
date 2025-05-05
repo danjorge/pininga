@@ -11,6 +11,7 @@
     box-sizing: border-box;
     transform: translateZ(0);
     will-change: transform;
+    pointer-events: all;
 }
 
 @media (max-width: 768px) {
@@ -27,10 +28,75 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
     position: relative;
-    padding-left: 1rem;
+    z-index: 1001;
+    pointer-events: all;
+    background-color: transparent;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.desktopMenu {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+
+    .desktopMenu {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-right: 2rem;
+    }
+
+    .desktopLink {
+        color: var(--text-color, #4F474E);
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    .nav.scrolled .desktopLink {
+        --text-color: #fff;
+    }
+
+    .desktopLink.active {
+        border-bottom-width: 7px;
+        border-bottom-color: rgba(255, 213, 79, 1);
+        border-bottom-style: solid;
+        display: inline-block;
+        padding-bottom: 3px;
+    }
+
+    .desktopLink:hover {
+        color: var(--hover-color, #000);
+    }
+
+    .nav.scrolled .desktopLink {
+        color: #FFFFFF;
+    }
+
+    .nav.scrolled .desktopLink:hover {
+        color: #000;
+    }
+
+    .menuContent {
+        display: none !important;
+    }
 }
 
 .logo {
@@ -41,7 +107,8 @@
     transition: color 0.3s;
     z-index: 2;
     position: relative;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
+    pointer-events: all;
 }
 
 .logo.scrolled {
@@ -75,11 +142,11 @@
     height: 100vh;
     width: 250px;
     background-color: rgba(79, 71, 78, 1);
-    padding: 4rem 2rem 2rem;
+    padding: 5rem 2rem 2rem;
     animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1001;
+    z-index: 1500;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -147,10 +214,19 @@
     height: 30px;
     position: relative;
     cursor: pointer;
-    z-index: 1002;
+    z-index: 2000;
     border: none;
     background: none;
     padding: 0;
+    margin-right: 1rem;
+}
+
+.hamburger.open {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    margin: 0;
+    z-index: 2001;
 }
 
 .hamburger span {
@@ -161,31 +237,28 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: all 0.3s ease-in-out;
-}
-
-.hamburger.scrolled span {
-    background-color: #EDE8E3;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .hamburger span:nth-child(1) {
-    top: 10px;
+    top: 8px;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
 .hamburger span:nth-child(2) {
-    top: 18px;
+    top: 14px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .hamburger span:nth-child(3) {
-    top: 26px;
-}
-
-.hamburger.open span {
-    background-color: #EDE8E3 !important;
+    top: 20px;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
 .hamburger.open span:nth-child(1) {
-    top: 18px;
+    top: 14px;
     transform: translateX(-50%) rotate(45deg);
 }
 
@@ -194,8 +267,57 @@
 }
 
 .hamburger.open span:nth-child(3) {
-    top: 18px;
+    top: 14px;
     transform: translateX(-50%) rotate(-45deg);
+}
+
+.hamburger.open {
+    margin: 0;
+}
+
+.hamburger.open span {
+    background-color: #FFFFFF !important;
+}
+
+.hamburger.scrolled span {
+    background-color: #EDE8E3;
+}
+
+.hamburger span:nth-child(1) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 14px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger.open span {
+    background-color: #FFFFFF !important;
+}
+
+.hamburger.open span:nth-child(1) {
+    top: 14px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 14px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.hamburger.open {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    margin: 0;
 }
 
 .menuOpen::before {

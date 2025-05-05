@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './NossaCasa.module.css';
+import nossaCasaImage from '../../assets/images/Sessão 1 - NOSSA CASA_20250422_233155_0000.jpg';
 
 const NossaCasa = () => {
     return (
-        <div className={styles.container}>
-            <h1>Nossa Casa</h1>
-            <div className={styles.content}>
-                <section className={styles.intro}>
-                    <p>Bem-vindo ao Pininga, um espaço acolhedor onde tradição e modernidade se encontram.</p>
-                </section>
-            </div>
+        <div className={styles.pageContainer}>
+            <img
+                src={nossaCasaImage}
+                alt="Nossa Casa"
+                className={styles.fullImage}
+            />
         </div>
     );
 };

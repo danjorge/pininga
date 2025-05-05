@@ -59,21 +59,55 @@ function Menu() {
     return (
         <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
-                <button 
-                    className={`${styles.hamburger} ${(isMenuOpen || isClosing) ? styles.open : ''} ${isScrolled ? styles.scrolled : ''}`} 
-                    onClick={toggleMenu} 
-                    aria-label="Menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <NavLink 
-                    to="/nossa-casa" 
-                    className={`${styles.logo} ${isScrolled ? styles.scrolled : ''}`}
-                >
-                    Pininga Restaurante
-                </NavLink>
+                <div className={styles.leftSection}>
+                    <button 
+                        className={`${styles.hamburger} ${(isMenuOpen || isClosing) ? styles.open : ''} ${isScrolled ? styles.scrolled : ''}`} 
+                        onClick={toggleMenu} 
+                        aria-label="Menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <NavLink 
+                        to="/nossa-casa" 
+                        className={`${styles.logo} ${isScrolled ? styles.scrolled : ''}`}
+                    >
+                        Pininga Restaurante
+                    </NavLink>
+                </div>
+                <div className={styles.desktopMenu}>
+                    <NavLink 
+                        to="/nossa-casa" 
+                        className={({ isActive }) => `${styles.desktopLink} ${isActive ? styles.active : ''}`}
+                    >
+                        Nossa Casa
+                    </NavLink>
+                    <NavLink 
+                        to="/nossa-gastronomia" 
+                        className={({ isActive }) => `${styles.desktopLink} ${isActive ? styles.active : ''}`}
+                    >
+                        Nossa Gastronomia
+                    </NavLink>
+                    <NavLink 
+                        to="/nossa-filosofia" 
+                        className={({ isActive }) => `${styles.desktopLink} ${isActive ? styles.active : ''}`}
+                    >
+                        Nossa Filosofia
+                    </NavLink>
+                    <NavLink 
+                        to="/quem-somos" 
+                        className={({ isActive }) => `${styles.desktopLink} ${isActive ? styles.active : ''}`}
+                    >
+                        Quem Somos Nós
+                    </NavLink>
+                    <NavLink 
+                        to="/contato" 
+                        className={({ isActive }) => `${styles.desktopLink} ${isActive ? styles.active : ''}`}
+                    >
+                        Contato
+                    </NavLink>
+                </div>
             </div>
             
             {(isMenuOpen || isClosing) && (

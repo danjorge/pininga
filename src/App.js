@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/pininga">
       <div className="App">
         <Menu />
         <main className="main-content">

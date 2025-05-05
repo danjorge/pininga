@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './NossaGastronomia.module.css';
+import nossaGastronomiaImage from '../../assets/images/Sessão 2 - NOSSA GASTRONOMIA_20250422_232233_0000.jpg';
 
 const NossaGastronomia = () => {
     return (
-        <div className={styles.container}>
-            <h1>Nossa Gastronomia</h1>
-            <div className={styles.content}>
-                <section className={styles.intro}>
-                    <p>Descubra os sabores únicos da nossa culinária, onde cada prato conta uma história.</p>
-                </section>
-            </div>
+        <div className={styles.pageContainer}>
+            <img
+                src={nossaGastronomiaImage}
+                alt="Nossa Gastronomia"
+                className={styles.fullImage}
+            />
         </div>
     );
 };
