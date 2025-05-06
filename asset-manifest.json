@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/pininga/static/css/main.37c69cd7.css",
-    "main.js": "/pininga/static/js/main.44d980e1.js",
+    "main.js": "/pininga/static/js/main.023382e6.js",
     "static/js/453.51eeb13a.chunk.js": "/pininga/static/js/453.51eeb13a.chunk.js",
     "static/media/Sessão 3 - NOSSA FILOSOFIA_20250422_104908_0000.jpg": "/pininga/static/media/Sessão 3 - NOSSA FILOSOFIA_20250422_104908_0000.2790ee3a7c7e2d3ed0a8.jpg",
     "static/media/Sessão 2 - NOSSA GASTRONOMIA_20250422_232233_0000.jpg": "/pininga/static/media/Sessão 2 - NOSSA GASTRONOMIA_20250422_232233_0000.dbdd70fbc6479e963fad.jpg",
+    "static/media/Sessão 5 - Contato - DOC-20250422-WA0018.png": "/pininga/static/media/Sessão 5 - Contato - DOC-20250422-WA0018.d6953f764b7bb69d5c61.png",
     "static/media/Sessão 1 - NOSSA CASA_20250422_233155_0000.jpg": "/pininga/static/media/Sessão 1 - NOSSA CASA_20250422_233155_0000.be1eda951e5ca2cf698d.jpg",
     "static/media/Sessão 4 - QUEM SOMOS_20250422_104953_0000.jpg": "/pininga/static/media/Sessão 4 - QUEM SOMOS_20250422_104953_0000.52413112f9a3613e9c60.jpg",
-    "static/media/Sessão 5 - Contato - DOC-20250422-WA0018.jpg": "/pininga/static/media/Sessão 5 - Contato - DOC-20250422-WA0018.598b908e80a7e8efb73f.jpg",
     "index.html": "/pininga/index.html",
     "main.37c69cd7.css.map": "/pininga/static/css/main.37c69cd7.css.map",
-    "main.44d980e1.js.map": "/pininga/static/js/main.44d980e1.js.map",
+    "main.023382e6.js.map": "/pininga/static/js/main.023382e6.js.map",
     "453.51eeb13a.chunk.js.map": "/pininga/static/js/453.51eeb13a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37c69cd7.css",
-    "static/js/main.44d980e1.js"
+    "static/js/main.023382e6.js"
   ]
 }
